@@ -1,28 +1,9 @@
-ASTRO 110,Astronomy,Spring 2014,B
-BA 211,Accounting 1,Spring 2016,B
-CIS 120,Computer Concepts 1,Fall 2015,A
-CIS 121,Computer Concepts 2,Winter 2016,A
-CIS 122,Software Design,Winter 2016,A
-CIS 133J,Java Programming 1,Spring 2016,A
-CIS 140M,Operating Sys: Microsoft,Winter 2016,A
-CIS 179,Data Comm Concepts,Spring 2016,B
-COMM 214,Communication Studies,Fall 2016,A
 CS 140U,Intro to UNIX,Summer 2016,A
 CS 160,Intro to Comp Science,Summer 2015,A
 CS 161,Computer Science 1,Spring 2016,A
 CS 162,Comp Science 2,Fall 2016,A
-ELECT 120,DC Circuits,Fall 2013,A
-ELECT 121,AC Circuits,Fall 2013,A
-ELECT 130,Motors and Controllers,Fall 2013,B
-ELECT 267,Elect Codes,Spring 2014,B
-HST 201,US History(Xfer),DVC Xfer,B
 MATH 111,College Algebra,Fall 2015,A
 MATH 112,Elementary Functions (Trig),Summer 2016,B
 MATH 251,Calculus 1,Fall 2016,A
-MATH 75,Pre Algebra,Summer 2013,A
-MATH 90,Elementary Algebra,Spring 2014,A
-MATH 95,Intermediate Algebra,Summer 2015,A
-PHL 195,Philosphy(Science & Occult),Fall 2015,B
-PSY 201A,Psycology,Fall 2016,A
 WR 121,Writing,Summer 2015,B
 WR 227,Technical Writing,Summer 2016,A
