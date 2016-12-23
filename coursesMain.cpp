@@ -1,4 +1,4 @@
-// gpaMain.cpp
+// coursesMain.cpp
 // School course database using pointers and linked lists.
 // December 12, 2016
 // Author: Joseph Schell
