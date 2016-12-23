@@ -1,4 +1,4 @@
-// gpaHeader.h
+// coursesHeader.h
 // December 12, 2016
 // Author: Joseph Schell
 // Sources: None
