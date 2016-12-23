@@ -1,4 +1,4 @@
-# School Course Organizer 
+# School Course Transcript Organizer 
 
 This is a project I decided to do outside of the classroom after my second
 term of Computer Science in order to practice using linked lists. I also had 
@@ -8,7 +8,7 @@ if none can be found in the home directory. The user is able to add or delete
 courses from the text file. I also added an ability to calculate the GPA of all 
 courses on the list.
 
-# How to use:
+# How to use
 
 Upon execution the program will ask the user for the name of a text file to open 
 and manipulate. I have provided an ideal text file (courses.txt) or the program will
