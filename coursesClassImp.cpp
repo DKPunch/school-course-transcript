@@ -1,4 +1,4 @@
-// gpaImpFile.cpp 
+// coursesClassImp.cpp 
 // December 12, 2016
 // Author: Joseph Schell
 // Sources: None
@@ -256,7 +256,7 @@ void Transcript::writeData() {
 
 	Course * p = head;
 
-	while (p != nullptr & p->next != nullptr) {
+	while (p != nullptr && p->next != nullptr) {
 		outFile << p->name << ',' << p->description << ','
 			<< p->term << ',' << p->grade << '\n';
 		p = p->next;
