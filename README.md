@@ -14,3 +14,7 @@ Upon execution the program will ask the user for the name of a text file to open
 and manipulate. I have provided an ideal text file (courses.txt) or the program will
 create a new file if you prefer. After loading the file or creating a new one, an 
 option menu will appear.
+
+# Example Screenshot
+
+![Alt text](https://github.com/DKPunch/school-course-transcript/blob/master/coursesPic.jpg?raw=true "Courses Screenshot")
