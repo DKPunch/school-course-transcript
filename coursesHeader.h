@@ -38,7 +38,7 @@ public:
 	void displayData();
 	void addCourse();
 	void deleteCourse();
-	void calcGPA();
+	int calcGPA();
 	void writeData();
 private:
 	Course * findCourse(char * name);
