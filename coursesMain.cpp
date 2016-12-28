@@ -10,17 +10,17 @@ int main() {
 	Transcript list;
 	char reply;
 
-	cout << "Welcome to the Course Transcript and GPA program." << endl;
+	std::cout << "Welcome to the Course Transcript and GPA program." << std::endl;
 	list.loadData();
 
 	do {    // Welcome Screen
-		cout << "What would you like to do:\n"
+		std::cout << "What would you like to do:\n"
 			<< "L: Shows a complete transcript of courses taken.\n"
 			<< "A: Add a course to the list.\n"
 			<< "D: Delete a course from the list.\n"
 			<< "C: Calculate GPA.\n"
-			<< "Q: Quit program." << endl;
-		cout << "--> ";
+			<< "Q: Quit program." << std::endl;
+		std::cout << "--> ";
 
 		reply = readChoice();
 		list.exeChoice(reply);
@@ -34,18 +34,18 @@ int main() {
 char readChoice() {
 	char choice;
 
-	cin >> choice;
-	cin.ignore(100, '\n');
+	std::cin >> choice;
+	std::cin.ignore(100, '\n');
 	return choice;
 }
 
 // Verifies user inputs c-string.
 void readString(char inputStr[], const char prompt[]) {
-	cout << prompt;
-	cin.getline(inputStr, strSize, '\n');
-	while (!cin) {
-		cin.clear();
-		cin.ignore(100, '\n');
+	std::cout << prompt;
+	std::cin.getline(inputStr, strSize, '\n');
+	while (!std::cin) {
+		std::cin.clear();
+		std::cin.ignore(100, '\n');
 	}
 }
 
