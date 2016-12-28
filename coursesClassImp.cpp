@@ -180,7 +180,6 @@ void Transcript::deleteCourse() {
 		ptr = findCourse(tempStr);
 		removedNum++;
 	}
-
 	if (removedNum > 0) {
 		cout << removedNum
 			<< " course has been removed from the list. \n";
@@ -228,7 +227,7 @@ int Transcript::calcGPA() {
 		}
 	}
 	catch (int x) {
-		cout << "\nYou currently have " << x << " classes stored "
+		cout << "\nYou currently have " << x << " courses stored "
 			<< "in the database, cannot divide by " << x << "!\n" << endl;
 		return 0;
 	}
