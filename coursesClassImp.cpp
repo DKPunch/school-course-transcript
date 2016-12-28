@@ -36,35 +36,35 @@ Transcript::~Transcript() {
 // Reads data from text file that was input
 // by the user into pointer arrays.
 int Transcript::loadData() {
-	fstream inputFile;
+	std::fstream inputFile;
 	char tempFileName[strSize], tempStr[strSize];
 	char lastChar;
 	long long charCount;
 
-	cout << "What file would you like to use for input and output? ";
-	cin.getline(tempFileName, strSize);
+	std::cout << "What file would you like to use for input and output? ";
+	std::cin.getline(tempFileName, strSize);
 
 	int size = strlen(tempFileName); // added for set size to tempName
 	fileStr = new char[size + 1]; // +1 for NULL
 	strncpy(fileStr, tempFileName, size); // (destination, source, num)
 	fileStr[size] = '\0'; // Explicit NULL termination
-	inputFile.open(fileStr, ios::in);
+	inputFile.open(fileStr, std::ios::in);
 
 	while (!inputFile.is_open()) { // Invalid File Error Check
-		cout << "File does not exist. Creating a new file for data...\n" << endl;
-		inputFile.open(fileStr, ios::app); // Creates new file
+		std::cout << "File does not exist. Creating a new file for data...\n" << std::endl;
+		inputFile.open(fileStr, std::ios::app); // Creates new file
 		inputFile.close();
 
-		cout << "Successfully created new file.\n" << endl;
+		std::cout << "Successfully created new file.\n" << std::endl;
 		return 0;
 	}
 	inputFile.close();
-	inputFile.open(fileStr, ios::in | ios::out);
+	inputFile.open(fileStr, std::ios::in | std::ios::out);
 
 	while (!inputFile.eof()) {
 		Course * ptr = new Course;
 		ptr->next = nullptr;
-		
+
 		inputFile.getline(tempStr, strSize, ',');
 		if (strlen(tempStr) == 0) {
 			break;
@@ -87,7 +87,7 @@ int Transcript::loadData() {
 	inputFile.getline(tempStr, strSize, '\n');
 	inputFile.close();
 
-	cout << "Successfully loaded " << count << " courses..." << endl;
+	std::cout << "Successfully loaded " << count << " courses..." << std::endl;
 
 	displayData();
 	return 0;
@@ -112,31 +112,31 @@ void Transcript::exeChoice(char reply) {
 		writeData();
 		break;
 	default:
-		cout << "Error, invalid input.\n" << endl;
+		std::cout << "Error, invalid input.\n" << std::endl;
 		break;
 	}
 }
 
 // Displays all data from the database onto the screen.
 void Transcript::displayData() {
-	cout << endl << left << setw(nameWidth) << "Course Name"
-		<< left << setw(descWidth) << "Description"
-		<< left << setw(termWidth) << "Term"
-		<< left << setw(gradeWidth) << "Grade" << endl;
-	cout << "------------------------------------"
-		<< "------------------------------------" << endl;
+	std::cout << std::endl << std::left << std::setw(nameWidth) << "Course Name"
+		<< std::left << std::setw(descWidth) << "Description"
+		<< std::left << std::setw(termWidth) << "Term"
+		<< std::left << std::setw(gradeWidth) << "Grade" << std::endl;
+	std::cout << "------------------------------------"
+		<< "------------------------------------" << std::endl;
 
 	Course * p = head;
 
 	while (p != nullptr) {
-		cout << left << setw(nameWidth) << p->name
-			<< left << setw(descWidth) << p->description
-			<< left << setw(termWidth) << p->term
-			<< "  " << setfill(' ') << setw(gradeWidth) << p->grade << endl;
+		std::cout << std::left << std::setw(nameWidth) << p->name
+			<< std::left << std::setw(descWidth) << p->description
+			<< std::left << std::setw(termWidth) << p->term
+			<< "  " << std::setfill(' ') << std::setw(gradeWidth) << p->grade << std::endl;
 		p = p->next;
 	}
 
-	cout << "\n";
+	std::cout << "\n";
 }
 
 // Takes user input and adds this data as a
@@ -160,7 +160,7 @@ void Transcript::addCourse() {
 	strncpy(ptr->grade, tempStr, strlen(tempStr) + 1);
 
 
-	cout << "\nSuccessfully added " << ptr->name << " to the course list.\n" << endl;
+	std::cout << "\nSuccessfully added " << ptr->name << " to the course list.\n" << std::endl;
 	addCourseSeq(ptr);
 }
 
@@ -180,14 +180,15 @@ void Transcript::deleteCourse() {
 		ptr = findCourse(tempStr);
 		removedNum++;
 	}
+
 	if (removedNum > 0) {
-		cout << removedNum
+		std::cout << removedNum
 			<< " course has been removed from the list. \n";
 	}
 	else {
-		cout << "Course not found. Nothing has been removed from the list. \n";
+		std::cout << "Course not found. Nothing has been removed from the list. \n";
 	}
-	cout << "\n";
+	std::cout << "\n";
 
 }
 
@@ -199,9 +200,10 @@ int Transcript::calcGPA() {
 	double points = 0;
 	double gpa = 0;
 
-	cout << fixed << showpoint << setprecision(3);
+	std::cout << std::fixed << std::showpoint << std::setprecision(3);
 
 	Course * p = head;
+
 	try {
 		while (p != nullptr) {
 			x = *(p->grade);
@@ -227,25 +229,25 @@ int Transcript::calcGPA() {
 		}
 	}
 	catch (int x) {
-		cout << "\nYou currently have " << x << " courses stored "
-			<< "in the database, cannot divide by " << x << "!\n" << endl;
+		std::cout << "\nYou currently have " << x << " courses stored "
+			<< "in the database, cannot divide by " << x << "!\n" << std::endl;
 		return 0;
 	}
 
 	gpa /= count;
-	cout << "\nYour current GPA after completing "
-		<< count << " courses is: " << gpa << ".\n" << endl;
+	std::cout << "\nYour current GPA after completing "
+		<< count << " courses is: " << gpa << ".\n" << std::endl;
 	return 0;
 }
 
-
 // Writes all data to the original text file.
 void Transcript::writeData() {
-	ofstream outFile;
-	outFile.open(fileStr, ios::in | ios::out);
+	std::ofstream outFile;
+	outFile.open(fileStr, std::ios::in | std::ios::out);
+
 	try {
 		if (!outFile) {
-			cout << "cannot open file to write new data!";
+			std::cout << "cannot open file to write new data!";
 			exit(0);
 		}
 		else if (count <= 0) {
@@ -254,9 +256,9 @@ void Transcript::writeData() {
 	}
 	catch (int) {
 		outFile.close();
-		cout << "\nNo data left to write to file, "
+		std::cout << "\nNo data left to write to file, "
 			<< "will not save any information to this file.\n";
-		cout << "Terminating program..." << endl;
+		std::cout << "Terminating program..." << std::endl;
 		system("pause");
 		exit(0);
 	}
@@ -274,8 +276,8 @@ void Transcript::writeData() {
 	}
 
 	outFile.close();
-	cout << "Successfully wrote course data to the course report file." << endl;
-	cout << "Terminating program..." << endl;
+	std::cout << "Successfully wrote course data to the course report file." << std::endl;
+	std::cout << "Terminating program..." << std::endl;
 }
 
 // Tries to find a matching course name
