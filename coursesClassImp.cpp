@@ -276,7 +276,7 @@ void Transcript::writeData() {
 	}
 
 	outFile.close();
-	std::cout << "Successfully wrote course data to the course report file." << std::endl;
+	std::cout << "Successfully wrote data to the course text file." << std::endl;
 	std::cout << "Terminating program..." << std::endl;
 }
 
