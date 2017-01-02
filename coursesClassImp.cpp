@@ -38,9 +38,7 @@ Transcript::~Transcript() {
 int Transcript::loadData() {
 	std::fstream inputFile;
 	char tempFileName[strSize], tempStr[strSize];
-	char lastChar;
-	long long charCount;
-
+	
 	std::cout << "What file would you like to use for input and output? ";
 	std::cin.getline(tempFileName, strSize);
 
