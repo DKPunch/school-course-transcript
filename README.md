@@ -1,4 +1,4 @@
-# School Course Transcript Organizer 
+# School Transcript Organizer 
 
 This is a project I decided to do outside of the classroom after my first year
 of studying Computer Science. I felt it was a good opportunity to implement
