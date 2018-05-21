@@ -1,12 +1,15 @@
 # School Course Transcript Organizer 
 
-This is a project I decided to do outside of the classroom after my second
-term of Computer Science in order to practice using linked lists. I also had 
-a genuine need for a program that would allow me to manipulate college course 
-information. The program reads data from a text file or creates a new text file 
-if none can be found in the home directory. The user is able to add or delete 
-courses from the text file. I also added an ability to calculate the GPA of all 
-courses on the list.
+This is a project I decided to do outside of the classroom after my first year
+of studying Computer Science. I felt it was a good opportunity to implement
+a simple data structure (linked list) as well as experiment with some sorting
+and inserting ideas. I also had a genuine need for a program that would 
+allow me to manipulate college course information. The program reads data from 
+a text file or creates a new text file if none can be found in the home directory. 
+The user is able to add or delete courses from the text file. I also added an 
+ability to calculate the GPA of all courses on the list, which comes in handy 
+for quick calculations when trying to find out an overall GPA for students who
+have attended multiple schools.
 
 # How to use
 
